@@ -11,7 +11,7 @@
 <body>
         
     <?php
-    
+
     /*Abrir o XAMPP e um editor (IDE) para testar os exemplos apresentados na Aula 2. Você pode testar
     diretamente no navegador ou usando o php no terminal (cmd), executando php seu-codigo.php
     Lembre-se de salvar seus aplicativos na pasta C://xampp/htdocs/pasta-do-seu-projeto
@@ -242,6 +242,6 @@
      <a href=<?= $link ?>>
         <?php echo "O site da $label é $link"?>    
     </a>
-
+    <!-- Utiliza as aspas duplas para interpolar entre a String e o conteudo da variavel -->
 </body>
 </html>
