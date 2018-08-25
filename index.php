@@ -10,37 +10,35 @@
     <script src="main.js"></script>
 </head>
 <body>
-<?php 
-    // Crie um arquivo PHP chamado functions.php​, que deve conter uma biblioteca de funções para realizar
-    // operações sobre arrays. Você deve criar funções para encontrar: o maior valor, menor valor, número de
-    // valores do array, média, ordenação e busca de um valor (retorna true ou false). Em seu arquivo index.php
-    // você deve importar esta biblioteca de funções e fazer testes nas funções com valores estáticos.
+    <?php 
+        // Crie um arquivo PHP chamado functions.php​, que deve conter uma biblioteca de funções para realizar
+        // operações sobre arrays. Você deve criar funções para encontrar: o maior valor, menor valor, número de
+        // valores do array, média, ordenação e busca de um valor (retorna true ou false). Em seu arquivo index.php
+        // você deve importar esta biblioteca de funções e fazer testes nas funções com valores estáticos.
 
-    require('functions.php');
+        require('functions.php');
 
-    for($i = 0; $i < 11; $i++){
-        $vetor[$i] = rand(2,20);
-        echo "$vetor[$i]; ";
-    }
-    echo '</br> O Menor valor é: ';
-    echo menorValor($vetor);
-    echo '</br> O Maior valor é: ';
-    echo maiorValor($vetor);
+        for($i = 0; $i < 5; $i++){
+            $vetor[$i] = rand(2,20);
+            echo "$vetor[$i]; ";
+        }
 
-    echo '</br> Antes de ordenado: ';
-   
-    print_r($vetor);
-    echo '</br> Depois de ordenado: ';
-    $ordenado = ordenacao($vetor);
-    print_r($ordenado);
-    echo '</br> Depois de ordenado: ';
-    foreach($ordenado as $chave => $valor){
+        echo maiorValor($vetor);
+
+        echo menorValor($vetor);
+
+        echo tamanhoArray($vetor);
+
+        $ordenado = ordenacao($vetor);
+        foreach($ordenado as $chave => $valor){ //como se fosse um for percorrendo o vetor inteiro
         echo "<strong>${chave}</strong> - ${valor}; ";
-    }
-?>
+        }
 
-
-
-    
+        if (busca($vetor, 3)){
+            echo 'true';
+        }else{
+            echo 'false';
+        }
+    ?>   
 </body>
 </html>
