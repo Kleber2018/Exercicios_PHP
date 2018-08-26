@@ -37,5 +37,16 @@
         return false;
     }
 
+
+    // Exercício 2
+    function checaResultado($valores, $num){
+        $qtd = 0;
+        foreach($valores as $valor){ //como se fosse um for percorrendo o vetor inteiro
+            if ($valor == $num) {
+                $qtd = $qtd +1;
+            }
+        }
+        return $qtd;
+    }
     
 ?>
