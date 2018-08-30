@@ -39,47 +39,78 @@
         }else{
             echo 'false';
         }
-
+    ?>
+    <?php
     // 2    Faça um script PHP para ajudar Adão e Eva a saber quantas vitórias cada um obteve nos seus jogos de truco
     // durante o semestre. As vitórias e derrotas de cada jogo são representadas por um array de números do tipo
     // inteiro (0 representa vitórias da Eva e 1 representa as vitórias de Adão). Seu script PHP deve chamar a
     // função checaResultado​, passando o array e qual número deve ser contado como parâmetros e deve
     // receber como retorno o número de vitórias (ocorrências) do valor no array. Exemplo:
-    echo '</br></br>Exercício 2: </br>';
-    $adao = checaResultado([1, 0, 0, 0, 0, 1], 1);
-    echo "Adão ganhou ${adao} vezes";
+        echo '</br></br>Exercício 2: </br>';
+        $adao = checaResultado([1, 0, 0, 0, 0, 1], 1);
+        echo "Adão ganhou ${adao} vezes";
+    ?>
+    <!-- 3) Faça um script PHP que processa uma string no formato "Stark#Bran, Arya, Tony#Wolf" e gera um
+   array associativo a partir desta string. O array com o resultado do processamento deve conter o seguinte
+    formato ['family' => Stark, 'names' => ['Bran', 'Arya', 'Tony'], 'pet' => 'Wolf']​. Ao final você deve
+     renderizar esse array associativo no HTML com o seguinte formato:
+     Family Stark
+     Pet​: Wolf
+     Members​:
+     1. Bran
+     2. Arya
+     3. Tony -->
+    <?php
+        $texto = "Stark#Bran, Arya, Tony#Wolf";
+    
+        $vetor1 = explode('#', $texto);
+        print_r($vetor1);
+        echo '</br>';
+        $vetor2 = explode(',', $vetor1[1]);
+        $result = array_merge($vetor1, $vetor2);
+        print_r($result);
+        
+        $arrayassociativo = array(
+            'family' => "Family $vetor1[0]",
+            'pet' => $result[2],
+            'names' => [$vetor2[0], $vetor2[1], $vetor2[2]]
+        );
+        echo '</br>';
+        print_r($arrayassociativo['family']);
+?>
 
-    // 3) Faça um script PHP que processa uma string no formato "Stark#Bran, Arya, Tony#Wolf" e gera um
-    // array associativo a partir desta string. O array com o resultado do processamento deve conter o seguinte
-    // formato ['family' => Stark, 'names' => ['Bran', 'Arya', 'Tony'], 'pet' => 'Wolf']​. Ao final você deve
-    // renderizar esse array associativo no HTML com o seguinte formato:
-    // Family Stark
-    // Pet​: Wolf
-    // Members​:
-    // 1. Bran
-    // 2. Arya
-    // 3. Tony
+<h1> <?php print_r($arrayassociativo['family']); ?></h1>
+<p><b>Pet: </b><?php print_r($arrayassociativo['pet']); ?></p>
+<p><b>Members:</b></p>
+<ol><li>
+<?php echo $arrayassociativo['names'][0];
 
+foreach($arrayassociativo as $chave => $nome){
+    if($chave=='names'){
+        for($i =0; $i <3; $i++){
+            echo $nome[$i]."</br>";
+        }
+    }    
+}?>
+</li> </ol>
 
-
-
-//    4 ) Faça um script PHP que defina uma matriz, imprima em uma página HTML no formato de table e, então,
+<!-- //    4 ) Faça um script PHP que defina uma matriz, imprima em uma página HTML no formato de table e, então,
 //     defina e use uma função para também mostrar no HTML esta matriz de forma transposta, ou seja, imprimir
 //     a matriz com linhas e colunas invertidas. Exemplo:
 //     1 2 3       1 4 7
 //     4 5 6       2 5 8
-//     7 8 9       3 6 9
+//     7 8 9       3 6 9 -->
 
 
 
 
 
-// 5 Faça um script PHP que processa as vendas do mês de 5 vendedores de uma loja (em reais), armazenadas em
+<!-- // 5 Faça um script PHP que processa as vendas do mês de 5 vendedores de uma loja (em reais), armazenadas em
 // uma matriz (ou seja, um array de 5 vendedores x 4 semanas do mês). Seu script deve calcular e mostrar no
 // HTML: a) total de vendas do mês de cada vendedor; b) total de vendas de cada semana (todos os vendedores
-// juntos) no formato de um ​table​; c) total de vendas do mês da empresa.
+// juntos) no formato de um ​table​; c) total de vendas do mês da empresa. -->
 
 
-    ?>   
+    
 </body>
 </html>
