@@ -49,4 +49,19 @@
         return $qtd;
     }
     
+    //Exercício 3
+    function separa($tx){
+        $vetor1 = explode('#', $tx);
+        $vetor2 = explode(',', $vetor1[1]);
+        $result = array_merge($vetor1, $vetor2);
+                  
+        $ar = array(
+            'family' => "Family $vetor1[0]",
+            'pet' => $result[2],
+            'names' => [$vetor2[0], $vetor2[1], $vetor2[2]]
+        );
+
+        return $ar;
+    } 
+
 ?>

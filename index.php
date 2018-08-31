@@ -61,38 +61,19 @@
      2. Arya
      3. Tony -->
     <?php
+        echo "</br> </br>Exercício 3 </br>";
         $texto = "Stark#Bran, Arya, Tony#Wolf";
-    
-        $vetor1 = explode('#', $texto);
-        print_r($vetor1);
-        echo '</br>';
-        $vetor2 = explode(',', $vetor1[1]);
-        $result = array_merge($vetor1, $vetor2);
-        print_r($result);
-        
-        $arrayassociativo = array(
-            'family' => "Family $vetor1[0]",
-            'pet' => $result[2],
-            'names' => [$vetor2[0], $vetor2[1], $vetor2[2]]
-        );
-        echo '</br>';
-        print_r($arrayassociativo['family']);
-?>
+        $arrayassociativo = separa($texto);
+    ?>
 
-<h1> <?php print_r($arrayassociativo['family']); ?></h1>
-<p><b>Pet: </b><?php print_r($arrayassociativo['pet']); ?></p>
-<p><b>Members:</b></p>
-<ol><li>
-<?php echo $arrayassociativo['names'][0];
-
-foreach($arrayassociativo as $chave => $nome){
-    if($chave=='names'){
-        for($i =0; $i <3; $i++){
-            echo $nome[$i]."</br>";
-        }
-    }    
-}?>
-</li> </ol>
+    <h2> <?php print_r($arrayassociativo['family']); ?></h2>
+    <p><b>Pet: </b><?php print_r($arrayassociativo['pet']); ?></p>
+    <p><b>Members:</b></p>
+    <ol>
+        <li><?php echo $arrayassociativo['names'][0];?></li> 
+        <li><?php echo $arrayassociativo['names'][1];?></li> 
+        <li><?php echo $arrayassociativo['names'][2];?></li> 
+    </ol>
 
 <!-- //    4 ) Faça um script PHP que defina uma matriz, imprima em uma página HTML no formato de table e, então,
 //     defina e use uma função para também mostrar no HTML esta matriz de forma transposta, ou seja, imprimir
@@ -100,7 +81,18 @@ foreach($arrayassociativo as $chave => $nome){
 //     1 2 3       1 4 7
 //     4 5 6       2 5 8
 //     7 8 9       3 6 9 -->
-
+    <?php
+        echo "</br> Exercício 4 </br>";
+        $soma = 0;
+        for($i = 0; $i < 3; $i++){
+            for($j = 0; $j <3; $j++){
+                $m[$i][$j] = $soma;
+                $soma = $soma + 1;
+                echo $m[$i][$j];
+            }
+            echo '</br>';  
+        }
+    ?>
 
 
 
