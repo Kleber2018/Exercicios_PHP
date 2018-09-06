@@ -153,6 +153,7 @@
                $vendames = $vendames + $vendas[$i][$j];
             }
             echo "<td>".$vendames."</td>";
+            $vendames = 0;
             echo "</tr>";
         }
     echo "</table>\n";
