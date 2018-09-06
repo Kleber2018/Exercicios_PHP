@@ -88,19 +88,91 @@
             for($j = 0; $j <3; $j++){
                 $m[$i][$j] = $soma;
                 $soma = $soma + 1;
-                echo $m[$i][$j];
-            }
+           }
             echo '</br>';  
         }
     ?>
+    <?php
+        echo "<table style=width:6%>";
+    		for($i = 0; $i < 3; $i++){
+                echo "<tr>";
+                for($j = 0; $j <3; $j++){
+                    echo "<td>".$m[$i][$j]."</td>"; 
+                }
+                echo "</tr>";
+            }
+        echo "</table>\n";
+        echo "<br>";
 
-
+        echo "<table style=width:6%>";
+    		for($i = 0; $i < 3; $i++){
+                echo "<tr>";
+                for($j = 2; $j >=0; $j--){
+                    echo "<td>".$m[$i][$j]."</td>";
+                }
+                echo "</tr>";
+            }
+        echo "</table>\n";
+    ?>
 
 
 <!-- // 5 Faça um script PHP que processa as vendas do mês de 5 vendedores de uma loja (em reais), armazenadas em
 // uma matriz (ou seja, um array de 5 vendedores x 4 semanas do mês). Seu script deve calcular e mostrar no
 // HTML: a) total de vendas do mês de cada vendedor; b) total de vendas de cada semana (todos os vendedores
 // juntos) no formato de um ​table​; c) total de vendas do mês da empresa. -->
+
+<?php
+    $vendas = array([111.4, 100.5, 354.6, 213.7], [2.4, 200.5, 214.6, 877.7], [323.4, 350.5, 364.6, 23.7], [444.4, 410.5, 234.6, 253.7], [555.4, 510.5, 534.6, 253.7]);
+    echo "<br>";
+    echo "<h3>Total por semana para cara vendedor</h3>";
+    echo "<table style=width:20%>";
+        echo "<tr>";
+            echo "<th>".'Semana '.': '."</th>";
+            for($j = 0; $j < 4; $j++){
+                echo "<th>".($j+1)."</th>";
+            }
+        echo "</tr>";
+        for($i = 0; $i < 5; $i++){
+            echo "<tr>";
+            echo "<td>".'Vendedor '.($i+1).': '."</td>";
+            for($j = 0; $j < 4; $j++){
+                echo "<td>".$vendas[$i][$j]."</td>";
+            }
+            echo "</tr>";
+        }
+    echo "</table>\n";
+
+    echo "<br>";
+    echo "<h3>Total do mês para cara vendedor</h3>";
+    $vendames = 0;
+    echo "<table style=width:20%>";
+        for($i = 0; $i < 5; $i++){
+            echo "<tr>";
+            echo "<td>".'Vendedor '.($i+1).': '."</td>";
+            for($j = 0; $j < 4; $j++){
+               $vendames = $vendames + $vendas[$i][$j];
+            }
+            echo "<td>".$vendames."</td>";
+            echo "</tr>";
+        }
+    echo "</table>\n";
+
+    echo "<br>";
+    echo "<h3>Total </h3>";
+    $vendames = 0;
+    echo "<table style=width:20%>";
+    echo "<td>".'Total '.': '."</td>";
+        for($i = 0; $i < 5; $i++){                       
+            for($j = 0; $j < 4; $j++){
+               $vendames = $vendames + $vendas[$i][$j];
+            }
+        }
+        echo "<td>".$vendames."</td>";
+    echo "</table>\n"
+
+
+
+?>
 
 
     
