@@ -61,12 +61,12 @@
      2. Arya
      3. Tony -->
     <?php
-        echo "</br> </br>Exercício 3 </br>";
+        echo "</br> </br>Exercício 3";
         $texto = "Stark#Bran, Arya, Tony#Wolf";
         $arrayassociativo = separa($texto);
     ?>
 
-    <h2> <?php print_r($arrayassociativo['family']); ?></h2>
+    <h3> <?php print_r($arrayassociativo['family']); ?></h3>
     <p><b>Pet: </b><?php print_r($arrayassociativo['pet']); ?></p>
     <p><b>Members:</b></p>
     <ol>
@@ -82,14 +82,13 @@
 //     4 5 6       2 5 8
 //     7 8 9       3 6 9 -->
     <?php
-        echo "</br> Exercício 4 </br>";
+        echo "</br> Exercício 4";
         $soma = 0;
         for($i = 0; $i < 3; $i++){
             for($j = 0; $j <3; $j++){
                 $m[$i][$j] = $soma;
                 $soma = $soma + 1;
            }
-            echo '</br>';  
         }
     ?>
     <?php
@@ -115,17 +114,16 @@
         echo "</table>\n";
     ?>
 
-
 <!-- // 5 Faça um script PHP que processa as vendas do mês de 5 vendedores de uma loja (em reais), armazenadas em
 // uma matriz (ou seja, um array de 5 vendedores x 4 semanas do mês). Seu script deve calcular e mostrar no
 // HTML: a) total de vendas do mês de cada vendedor; b) total de vendas de cada semana (todos os vendedores
 // juntos) no formato de um ​table​; c) total de vendas do mês da empresa. -->
 
 <?php
-    $vendas = array([111.4, 100.5, 354.6, 213.7], [2.4, 200.5, 214.6, 877.7], [323.4, 350.5, 364.6, 23.7], [444.4, 410.5, 234.6, 253.7], [555.4, 510.5, 534.6, 253.7]);
-    echo "<br>";
-    echo "<h3>Total por semana para cara vendedor</h3>";
-    echo "<table style=width:20%>";
+    echo "</br>Exercício 5";
+    $vendas = array([111.41, 100.51, 354.52, 213.85], [222.49, 200.20, 214.60, 877.72], [323.42, 350.55, 364.65, 23.73], [444.10, 410.50, 234.65, 253.74], [555.44, 510.50, 534.64, 253.11]);
+    echo "<h4>Total por semana para cara vendedor</h4>";
+    echo "<table style=width:25%>";
         echo "<tr>";
             echo "<th>".'Semana '.': '."</th>";
             for($j = 0; $j < 4; $j++){
@@ -136,14 +134,14 @@
             echo "<tr>";
             echo "<td>".'Vendedor '.($i+1).': '."</td>";
             for($j = 0; $j < 4; $j++){
-                echo "<td>".$vendas[$i][$j]."</td>";
+                echo "<td>".'R$ '.$vendas[$i][$j]."</td>";
             }
             echo "</tr>";
         }
     echo "</table>\n";
 
     echo "<br>";
-    echo "<h3>Total do mês para cara vendedor</h3>";
+    echo "<h4>Total do mês para cara vendedor</h4>";
     $vendames = 0;
     echo "<table style=width:20%>";
         for($i = 0; $i < 5; $i++){
@@ -152,28 +150,23 @@
             for($j = 0; $j < 4; $j++){
                $vendames = $vendames + $vendas[$i][$j];
             }
-            echo "<td>".$vendames."</td>";
+            echo "<td>".'R$ '.$vendames."</td>";
             $vendames = 0;
             echo "</tr>";
         }
-    echo "</table>\n";
+    echo "</table>";
 
-    echo "<br>";
-    echo "<h3>Total </h3>";
-    $vendames = 0;
+    echo "<h4>Total </h4>";
     echo "<table style=width:20%>";
-    echo "<td>".'Total '.': '."</td>";
-        for($i = 0; $i < 5; $i++){                       
-            for($j = 0; $j < 4; $j++){
-               $vendames = $vendames + $vendas[$i][$j];
-            }
-        }
-        echo "<td>".$vendames."</td>";
-    echo "</table>\n"
-
-
-
+        echo "<td>".'Total '.': '."</td>";
+        echo "<td>".'R$ '.somavendas($vendas).' reais'."</td>";
+    echo "</table>";
 ?>
+
+<!-- 6 Brasileirão. Crie um script PHP que imprima na tela a tabela do brasileirão. Para isso, você deve incluir a
+biblioteca chamada ​tabela.php(disponível no Moodle). Esta biblioteca irá fornecer duas variáveis dotipo
+array: ​$equipese ​$classificacao​. Você deve explorar o conteúdodestesarraysusando​var_dumpeentão deve montar 
+atabeladeclassificaçãodinamicamentecomPHP,iterandosobreessesdoisarrays,conformea imagem a seguir:   -->
 
 
     

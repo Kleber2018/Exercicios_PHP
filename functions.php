@@ -64,4 +64,15 @@
         return $ar;
     } 
 
+    //Exercício 5
+    function somavendas($vendas){
+        $vendames = 0;
+        for($i = 0; $i < 5; $i++){                       
+            for($j = 0; $j < 4; $j++){
+               $vendames = (double) $vendames + $vendas[$i][$j];
+            }
+        }
+        return $vendames;
+    }
+    
 ?>
