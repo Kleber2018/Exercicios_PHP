@@ -167,7 +167,22 @@
 biblioteca chamada ​tabela.php(disponível no Moodle). Esta biblioteca irá fornecer duas variáveis dotipo
 array: ​$equipese ​$classificacao​. Você deve explorar o conteúdodestesarraysusando​var_dumpeentão deve montar 
 atabeladeclassificaçãodinamicamentecomPHP,iterandosobreessesdoisarrays,conformea imagem a seguir:   -->
+<?php
+        require('tabela.php');
 
+       var_dump($classificacao[1]);
+       var_dump($equipes[1]);
+
+       print_r($classificacao);
+       print_r($equipes);
+
+
+       foreach($classificação as $chaveclass){ //como se fosse um for percorrendo o vetor inteiro
+            var_dump($classificação);
+        }
+       
+
+    ?>
 
     
 </body>
