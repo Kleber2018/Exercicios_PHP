@@ -15,7 +15,7 @@
         // operações sobre arrays. Você deve criar funções para encontrar: o maior valor, menor valor, número de
         // valores do array, média, ordenação e busca de um valor (retorna true ou false). Em seu arquivo index.php
         // você deve importar esta biblioteca de funções e fazer testes nas funções com valores estáticos.
-
+        echo '<h3>Exercício 1: </h3></br>';
         require('functions.php');
 
         for($i = 0; $i < 5; $i++){
@@ -46,7 +46,7 @@
     // inteiro (0 representa vitórias da Eva e 1 representa as vitórias de Adão). Seu script PHP deve chamar a
     // função checaResultado​, passando o array e qual número deve ser contado como parâmetros e deve
     // receber como retorno o número de vitórias (ocorrências) do valor no array. Exemplo:
-        echo '</br></br>Exercício 2: </br>';
+        echo '</br></br><h3>Exercício 2: </h3></br>';
         $adao = checaResultado([1, 0, 0, 0, 0, 1], 1);
         echo "Adão ganhou ${adao} vezes";
     ?>
@@ -60,8 +60,9 @@
      1. Bran
      2. Arya
      3. Tony -->
+
     <?php
-        echo "</br> </br>Exercício 3";
+        echo "</br> </br><h3>Exercício 3</h3>";
         $texto = "Stark#Bran, Arya, Tony#Wolf";
         $arrayassociativo = separa($texto);
     ?>
@@ -81,7 +82,8 @@
 //     1 2 3       1 4 7
 //     4 5 6       2 5 8
 //     7 8 9       3 6 9 -->
-    <?php
+    
+    <!-- <?php
         echo "</br> Exercício 4";
         $soma = 0;
         for($i = 0; $i < 3; $i++){
@@ -112,15 +114,15 @@
                 echo "</tr>";
             }
         echo "</table>\n";
-    ?>
+    ?> -->
 
 <!-- // 5 Faça um script PHP que processa as vendas do mês de 5 vendedores de uma loja (em reais), armazenadas em
 // uma matriz (ou seja, um array de 5 vendedores x 4 semanas do mês). Seu script deve calcular e mostrar no
 // HTML: a) total de vendas do mês de cada vendedor; b) total de vendas de cada semana (todos os vendedores
 // juntos) no formato de um ​table​; c) total de vendas do mês da empresa. -->
 
-<?php
-    echo "</br>Exercício 5";
+ <?php
+    echo "</br><h3>Exercício 5</h3>";
     $vendas = array([111.41, 100.51, 354.52, 213.85], [222.49, 200.20, 214.60, 877.72], [323.42, 350.55, 364.65, 23.73], [444.10, 410.50, 234.65, 253.74], [555.44, 510.50, 534.64, 253.11]);
     echo "<h4>Total por semana para cara vendedor</h4>";
     echo "<table style=width:25%>";
@@ -138,7 +140,7 @@
             }
             echo "</tr>";
         }
-    echo "</table>\n";
+    echo "</table>";
 
     echo "<br>";
     echo "<h4>Total do mês para cara vendedor</h4>";
@@ -157,7 +159,7 @@
     echo "</table>";
 
     echo "<h4>Total </h4>";
-    echo "<table style=width:20%>";
+    echo "<table style=width:10%>";
         echo "<td>".'Total '.': '."</td>";
         echo "<td>".'R$ '.somavendas($vendas).' reais'."</td>";
     echo "</table>";
@@ -167,23 +169,29 @@
 biblioteca chamada ​tabela.php(disponível no Moodle). Esta biblioteca irá fornecer duas variáveis dotipo
 array: ​$equipese ​$classificacao​. Você deve explorar o conteúdodestesarraysusando​var_dumpeentão deve montar 
 atabeladeclassificaçãodinamicamentecomPHP,iterandosobreessesdoisarrays,conformea imagem a seguir:   -->
-<?php
+    <?php
+    echo '<br><h3>Exercício 6</h3>';
         require('tabela.php');
-
-       var_dump($classificacao[1]);
-       var_dump($equipes[1]);
-
-       print_r($classificacao);
-       print_r($equipes);
-
-
-       foreach($classificação as $chaveclass){ //como se fosse um for percorrendo o vetor inteiro
-            var_dump($classificação);
-        }
-       
+        echo "<table style=width:30%>";
+            echo "<td>Posição</td> <td> </td> <td>Time</td> <td>Pontos</td> <td>Jogos</td> <td>Vitorias</td> <td>Derrotas</td> <td>Empates</td>";
+            foreach($classificacao as $linhaarray){
+                echo "<tr>";
+                    echo "<td>".$linhaarray['posicao']."</td>";
+                    foreach($equipes as $linhaarrayequipe){
+                        if ($linhaarray['time_id'] == $linhaarrayequipe['id']){
+                            echo "<td>"."<img src=".$linhaarrayequipe['brasao']."/>"."</td>";
+                            echo "<td>".$linhaarrayequipe['nome-comum']."</td>";
+                        }
+                    }
+                    echo "<td><b>".$linhaarray['pontos']."</b></td>";
+                    echo "<td>".$linhaarray['jogos']."</td>";
+                    echo "<td>".$linhaarray['vitorias']."</td>";
+                    echo "<td>".$linhaarray['derrotas']."</td>";
+                    echo "<td>".$linhaarray['empates']."</td>";
+                echo "</tr>";
+            }
+        echo "</table>";
 
     ?>
-
-    
 </body>
 </html>
