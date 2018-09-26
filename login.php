@@ -15,12 +15,12 @@
     </head>
 
     <body class="text-center">
-        <form class="form-signin" method="POST">
+        <form class="form-signin" method="POST" action="checaAutenticacao.php">
             <h1 class="h3 mb-3 font-weight-normal">Login</h1>
             <label for="inputEmail" class="sr-only">Usuário</label>
-            <input type="text" id="inputusuario" class="form-control" placeholder="Usuário" required autofocus>
+            <input name="usuario" type="text" id="inputusuario" class="form-control" placeholder="Usuário" required autofocus>
             <label for="inputPassword" class="sr-only">Senha</label>
-            <input type="password" id="inputsenha" class="form-control" placeholder="Senha" required>
+            <input name="senha" type="password" id="inputsenha" class="form-control" placeholder="Senha" required>
             <div class="checkbox mb-3">
                 <label>
                 <input type="checkbox" value="remember-me"> Relembrar
