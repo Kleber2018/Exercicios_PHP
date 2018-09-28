@@ -7,7 +7,7 @@
         <title>Lista 3 &ndash; PHP &ndash; Pure</title>
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-        <link rel="stylesheet" href="css/layouts/pricing.css">
+        <link rel="stylesheet" href="css/pricing.css">
 
     </head>
 <?php
@@ -24,11 +24,11 @@
 
 <main class="l-content information" class="l-box">
 <div class="pure-menu pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading pure-menu-link">BRAND</a>
+    <a href="index2.php" class="pure-menu-heading pure-menu-link">TELA 2</a>
     <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">News</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sports</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Login</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">nada</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">nada</a></li>
+        <li class="pure-menu-item"><a href="desloga.php" class="pure-menu-link">Logout</a></li>
     </ul>
 </div>
     <body>

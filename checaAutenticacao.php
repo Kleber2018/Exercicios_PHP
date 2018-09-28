@@ -14,8 +14,9 @@
         'usuario' => "adm",
         'senha' => "333"
     );
-
+    session_destroy();
     session_start();
+    
     $vr=true;
     foreach($verificador as $linha){
         if($usuario == $linha['usuario'] && $senha == $linha['senha']){
