@@ -1,7 +1,9 @@
 <?php
-    $bd = new mysqli('localhost', 'root', '', 'Aula11Web');
+    $bd = new mysqli('localhost', 'root', '', 'aula11web');
     if($bd->connect_errno){
-        throw new Exception('Erro na conexão'.$conexao->connect_error);
+        throw new Exception('Erro na conexão'.$bd->connect_error);
+    } else {
+        echo 'conexão bem sucedida';
     }
     $bd->set_charset("utf-8");
     // create table usuarios(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, nome VARCHAR(20), idade int);
