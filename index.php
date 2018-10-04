@@ -14,11 +14,10 @@
 
 
 <main class="l-content information">
-    <body class="l-box">
+     <body class="l-box">
         <form method="POST" action="usuario.php" class="pure-form pure-form-stacked">
             <fieldset>
                 <legend><h3>Exercício 1</h3></legend>
-
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-3-8">
                         <label for="first-name">Nome</label>
@@ -28,9 +27,47 @@
                         <label for="last-name">Idade</label>
                         <input name="idade" id="last-name" class="pure-u-23-24" type="text" required>
                     </div>
-                    <button type="submit" class="pure-button pure-button-primary pure-u-1 pure-u-md-1-8">Gravar POST</button>
-
-                </div><br><br><br><br><br><br><br><br>
+                    <div class="pure-u-1 pure-u-md-1-8">
+                        <label for="first-name">Time 2</label>
+                        <select name="tipo" id="first-name" class="pure-input-1">
+                            <option>Insert</option>
+                            <option>Update</option>
+                            <option>Delete</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="pure-button pure-button-primary pure-u-1 pure-u-md-1-8">Ok</button>
+                </div><br><br><br><br><br><br>
+                
+            </fieldset>
+        </form>
+    </body> 
+    <body class="l-box">
+        <form method="POST" action="usuario.php" class="pure-form pure-form-stacked">
+            <fieldset>
+                <legend><h3>Exercício 1</h3></legend>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-5">
+                        <label for="first-name">Nome</label>
+                        <input name="nome" id="first-name" class="pure-u-23-24" type="text" required>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-5">
+                        <label for="first-name">Novo nome</label>
+                        <input name="nome1" id="first-name" class="pure-u-23-24" type="text" required>
+                    </div>
+                    <div class="pure-u-1-4 pure-u-md-1-5">
+                        <label for="last-name">Idade</label>
+                        <input name="idade" id="last-name" class="pure-u-23-24" type="text" required>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-5">
+                        <label for="first-name">Time 2</label>
+                        <select name="tipo" id="first-name" class="pure-input-1">
+                            <option>Insert</option>
+                            <option>Update</option>
+                            <option>Delete</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="pure-button pure-button-primary pure-u-1 pure-u-md-1-5">alterar</button>
+                </div><br><br><br><br><br><br>
                 
             </fieldset>
         </form>
