@@ -17,7 +17,7 @@
      <body class="l-box">
         <form method="POST" action="usuario.php" class="pure-form pure-form-stacked">
             <fieldset>
-                <legend><h3>Exercício 1</h3></legend>
+                <legend><h3>Exercício 1 Inserir</h3></legend>
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-3-8">
                         <label for="first-name">Nome</label>
@@ -31,23 +31,20 @@
                         <label for="first-name">Time 2</label>
                         <select name="tipo" id="first-name" class="pure-input-1">
                             <option>Insert</option>
-                            <option>Update</option>
-                            <option>Delete</option>
-                        </select>
+                     </select>
                     </div>
                     <button type="submit" class="pure-button pure-button-primary pure-u-1 pure-u-md-1-8">Ok</button>
-                </div><br><br><br><br><br><br>
-                
+                </div><br><br>
             </fieldset>
         </form>
     </body> 
     <body class="l-box">
         <form method="POST" action="usuario.php" class="pure-form pure-form-stacked">
             <fieldset>
-                <legend><h3>Exercício 1</h3></legend>
+                <legend><h3>Exercício 1 alterar e excluir</h3></legend>
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-5">
-                        <label for="first-name">Nome</label>
+                        <label for="first-name">Nome para pesquisar</label>
                         <input name="nome" id="first-name" class="pure-u-23-24" type="text" required>
                     </div>
                     <div class="pure-u-1 pure-u-md-1-5">
@@ -61,46 +58,30 @@
                     <div class="pure-u-1 pure-u-md-1-5">
                         <label for="first-name">Time 2</label>
                         <select name="tipo" id="first-name" class="pure-input-1">
-                            <option>Insert</option>
                             <option>Update</option>
                             <option>Delete</option>
                         </select>
                     </div>
                     <button type="submit" class="pure-button pure-button-primary pure-u-1 pure-u-md-1-5">alterar</button>
-                </div><br><br><br><br><br><br>
-                
+                </div><br><br>
+                <div>
+                    <button type="submit" class="pure-button pure-button-primary pure-u-1 pure-u-md-1-5">Listar todos</button>
+                </div><br><br><br><br><br>
             </fieldset>
         </form>
     </body> 
+
+    <!-- Construa uma aplicação que possibilite o controle de tarefas ao usuário. O usuário pode cadastrar uma nova
+    tarefa na lista, pode atualizar, remover ou visualizar detalhes. O banco de dados deve conter para cada tarefa
+    (titulo, descrição, status de conclusão). Na página com a lista das tarefas não concluídas deve haver um link
+    para uma página que exiba as tarefas concluídas. Todas essas funcionalidades devem ser feitas com banco de
+    dados MySQL. -->
     <?php $i =0; ?>
     <body class="l-box">
         <form method="GET" class="pure-form pure-form-stacked">
             <fieldset>
-                <legend><h3>Exercício 3</h3></legend>
-
-                <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-3-8">
-                        <label for="first-name">Nome do vendedor</label>
-                        <input name="nome" id="first-name" class="pure-u-23-24" type="text" required>
-                    </div>
-                    <div class="pure-u-1-4 pure-u-md-1-8">
-                        <label for="last-name">Semana 1</label>
-                        <input name="semana1" id="last-name" class="pure-u-23-24" type="text" required>
-                    </div>
-                    <div class="pure-u-1-4 pure-u-md-1-8">
-                        <label for="last-name">Semana 2</label>
-                        <input name="semana2" id="last-name" class="pure-u-23-24" type="text" required>
-                    </div>
-                    <div class="pure-u-1-4 pure-u-md-1-8">
-                        <label for="last-name">Semana 3</label>
-                        <input name="semana3" id="last-name" class="pure-u-23-24" type="text" required>
-                    </div>
-                    <div class="pure-u-1-4 pure-u-md-1-8">
-                        <label for="last-name">Semana 4</label>
-                        <input name="semana4" id="last-name" class="pure-u-23-24" type="text" required>
-                    </div>
-
-                    <button type="submit" class="pure-button pure-button-primary pure-u-1 pure-u-md-1-8">Gravar GET</button>
+                <legend><h3>Exercício 2</h3></legend>
+                    <button type="submit" class="pure-button pure-button-primary pure-u-1 pure-u-md-4-8">Acessar Exercício 2</button>
 
                 </div><br><br><br><br><br><br><br><br>
                 
