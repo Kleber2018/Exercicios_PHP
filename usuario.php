@@ -33,7 +33,7 @@
         } elseif($_POST['tipo'] == "Insert") {
             echo 'entrou dentro do if inserção';
             //inserindo um novo dado no banco da tabela usuario
-            $bd->query("INSERT INTO usuarios('id', 'nome', 'idade') VALUES (NULL, '${nome}','${idade}')");//TESTAR MELHOR
+            $bd->query("INSERT INTO usuarios(id, nome, idade) VALUES (NULL, '${nome}','${idade}')");//TESTAR MELHOR
             // Recuperar o ID inserido, via auto incremento
             $id_inserido = $bd->insert_id;
             
@@ -45,7 +45,7 @@
     if($resultados->num_rows > 0 ){
         //Para cessar os dados, usar método fetch_array() ou fetch_object
         while($usuario = $resultados->fetch_object()){
-            echo "<li>".$usuario->nome."</li>";
+            echo "<li>".$usuario->nome.' - '.$usuario->idade."</li>";
         }
     } else {
         echo "não há usuários cadastrados";

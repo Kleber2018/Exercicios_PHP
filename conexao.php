@@ -6,5 +6,6 @@
         echo 'conexão bem sucedida';
     }
     $bd->set_charset("utf-8");
-    // create table usuarios(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, nome VARCHAR(20), idade int);
+    // create database aula11web;
+    //create table usuarios(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, nome VARCHAR(20), idade int);
 ?>
