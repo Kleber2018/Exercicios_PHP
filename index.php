@@ -4,14 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A layout example that shows off a responsive pricing table.">
-    <title>Lista 5 &ndash; PHP &ndash; Pure</title>
+    <title>Lista 5 Exercíco 1 &ndash; PHP &ndash; Pure</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <link rel="stylesheet" href="css/layouts/pricing.css">
 
 </head>
 <body>
-
 
 <main class="l-content information">
      <body class="l-box">
@@ -78,19 +77,11 @@
     dados MySQL. -->
     <?php $i =0; ?>
     <body class="l-box">
-        <form method="GET" class="pure-form pure-form-stacked">
-            <fieldset>
-                <legend><h3>Exercício 2</h3></legend>
-                    <button type="submit" class="pure-button pure-button-primary pure-u-1 pure-u-md-4-8">Acessar Exercício 2</button>
-
-                </div><br><br><br><br><br><br><br><br>
-                
-            </fieldset>
-        </form>
-    </body>       
-    <a href="index.php">
-        <button type="button" class="pure-button pure-button-primary pure-u-1 pure-u-md-1-1">Voltar</button>
-    </a><br><br><br><br><br><br><br><br>
+        <legend><h3>Exercício 2</h3></legend>
+        <a href="index2.php">
+            <button type="button" class="pure-button pure-button-primary pure-u-1 pure-u-md-4-8">Abrir Exercício 2</button>
+        </a><br><br><br><br><br><br><br><br>
+    </body>     
 </main> <!-- end l-content -->
 
 <div class="footer l-box">
