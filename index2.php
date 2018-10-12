@@ -70,6 +70,7 @@ STATUS VARCHAR(10)
                         <label for="last-name">Titulo</label>
                         <input name="titulo" id="last-name" class="pure-u-23-24" type="text" required>
                     </div>
+                    
                     <div class="pure-u-1-4 pure-u-md-2-8">
                         <label for="last-name">Descricao</label>
                         <input name="descricao" id="last-name" class="pure-u-23-24" type="text" required>
