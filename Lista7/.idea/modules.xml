@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Lista5-PHP/.idea/Lista5-PHP.iml" filepath="$PROJECT_DIR$/../Lista5-PHP/.idea/Lista5-PHP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Lista6-PHP/.idea/Lista6-PHP.iml" filepath="$PROJECT_DIR$/../Lista6-PHP/.idea/Lista6-PHP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Lista7-PHP.iml" filepath="$PROJECT_DIR$/.idea/Lista7-PHP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TutorialPHP/.idea/TutorialPHP.iml" filepath="$PROJECT_DIR$/../TutorialPHP/.idea/TutorialPHP.iml" />
+    </modules>
+  </component>
+</project>

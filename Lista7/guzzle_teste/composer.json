@@ -1,0 +1,9 @@
+{
+    "require": {
+        "nesbot/carbon": "^2.4",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "classmap":["./"]
+    }
+}
